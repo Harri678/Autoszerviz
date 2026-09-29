@@ -77,7 +77,7 @@ namespace Program
             Console.WriteLine($"{rendszam} - {kor} éves jármű, {kilometerOra} km-rel");
         }
 
-        public void Szervizel(int dij)
+        public virtual void Szervizel(int dij)
         {
             if(dij > 100000)
             {

@@ -6,9 +6,10 @@
         {
             Szerviz szerviz = new Szerviz();
 
-            Jarmu asd = new Jarmu("", 55, 2000000, 234);
+            ElektromosAuto asd = new ElektromosAuto("", 55, 2000000, 234);
 
-            Console.WriteLine(asd.SzervizSzukseges);
+            asd.Szervizel(150000);
+            Console.WriteLine(asd.AkkumulatorSzint);
 
         }
     }

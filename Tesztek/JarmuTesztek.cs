@@ -68,41 +68,41 @@ namespace Tesztek
         // ElektromosAuto tesztek
         // -------------------------
 
-        //[Test]
-        //public void ElektromosAuto_UzemanyagSzint_MindigNulla()
-        //{
-        //    ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 100000, 80);
+        [Test]
+        public void ElektromosAuto_UzemanyagSzint_MindigNulla()
+        {
+            ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 100000, 80);
 
-        //    Assert.That(auto.UzemanyagSzint, Is.EqualTo(0));
-        //}
+            Assert.That(auto.UzemanyagSzint, Is.EqualTo(0));
+        }
 
-        //[Test]
-        //public void ElektromosAuto_AkkumulatorSzint_KorlatokKozottMarad()
-        //{
-        //    ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 100000, 150);
+        [Test]
+        public void ElektromosAuto_AkkumulatorSzint_KorlatokKozottMarad()
+        {
+            ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 100000, 150);
 
-        //    Assert.That(auto.AkkumulatorSzint, Is.EqualTo(100));
-        //}
+            Assert.That(auto.AkkumulatorSzint, Is.EqualTo(100));
+        }
 
-        //[Test]
-        //public void ElektromosAuto_Szervizel_NoveliAzAkkumulatorSzintet()
-        //{
-        //    ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 200000, 50);
+        [Test]
+        public void ElektromosAuto_Szervizel_NoveliAzAkkumulatorSzintet()
+        {
+            ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 200000, 50);
 
-        //    auto.Szervizel(50000);
+            auto.Szervizel(50000);
 
-        //    Assert.That(auto.AkkumulatorSzint, Is.EqualTo(70));
-        //}
+            Assert.That(auto.AkkumulatorSzint, Is.EqualTo(70));
+        }
 
-        //[Test]
-        //public void ElektromosAuto_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
-        //{
-        //    ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 200000, 50);
+        [Test]
+        public void ElektromosAuto_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
+        {
+            ElektromosAuto auto = new ElektromosAuto("EV-123", 3, 200000, 50);
 
-        //    auto.Szervizel(150000);
+            auto.Szervizel(150000);
 
-        //    Assert.That(auto.KilometerOra, Is.EqualTo(190000));
-        //}
+            Assert.That(auto.KilometerOra, Is.EqualTo(190000));
+        }
 
 
         //// -------------------------
