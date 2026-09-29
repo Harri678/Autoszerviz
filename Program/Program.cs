@@ -11,6 +11,10 @@
             asd.Szervizel(150000);
             Console.WriteLine(asd.AkkumulatorSzint);
 
+            Jarmu szervizNemSzukseges = new Jarmu("DEF-456", 3, 100000, 50);
+
+            szerviz.JarmuFelvetele(szervizNemSzukseges);
+
         }
     }
 }
