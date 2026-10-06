@@ -147,6 +147,48 @@ namespace Tesztek
         }
 
         //// -------------------------
+        //// Busz tesztek
+        //// -------------------------
+
+        [Test]
+        public void Busz_Utasok_KezdetiErtekHelyes()
+        {
+            Busz auto = new Busz("TR-123", 8, 150000, 60, 15);
+
+            Assert.That(auto.UtasokSzama, Is.EqualTo(15));
+        }
+
+        [Test]
+        public void Busz_Szervizel_SzervizElottLeuritiAzUtasokat()
+        {
+            Busz auto = new Busz("TR-123", 8, 200000, 60, 15);
+
+            auto.Szervizel(150000);
+
+            Assert.That(auto.UtasokSzama, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Busz_Szervizel_AzAlaposztalySzervizeleseIsLefut()
+        {
+            TeherAuto auto = new TeherAuto("TR-123", 8, 200000, 60, 15);
+
+            auto.Szervizel(150000);
+
+            Assert.That(auto.KilometerOra, Is.EqualTo(190000));
+            Assert.That(auto.UzemanyagSzint, Is.EqualTo(50));
+        }
+
+        [Test]
+        public void Busz_UtasokSzama_30Felett_30Lesz()
+        {
+            Busz auto = new Busz("TR-123", 8, 150000, 60, 35);
+
+            Assert.That(auto.UtasokSzama, Is.EqualTo(30));
+        }
+
+
+        //// -------------------------
         //// Szerviz tesztek
         //// -------------------------
 

@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Program
 {
-    internal class Busz : Jarmu
+    public class Busz : Jarmu
     {
         private int utasokSzama;
 
         public Busz(string rendszam, int kor, int kilometerOra, int uzemanyagSzint, int utasokSzama) : base(rendszam, kor, kilometerOra, uzemanyagSzint)
         {
-            this.utasokSzama = utasokSzama;
+            this.UtasokSzama = utasokSzama;
         }
 
-        public int UtasokSzama { get => utasokSzama; set
-            {
+        public int UtasokSzama { get => utasokSzama; 
+            set{
                 utasokSzama = Math.Clamp(value, 0, 30);
             } }
 
